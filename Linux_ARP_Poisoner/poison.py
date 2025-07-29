@@ -46,7 +46,7 @@ try:
         counter += 2
         print("\rSending ARP packages..." + str(counter), end="")
         time.sleep(3)
-except KeyboardInterrupt:
+except KeyboardInterrupt or IndexError :
     resetting_arp(user_target_ip,user_gateway_ip)
     resetting_arp(user_gateway_ip,user_target_ip)
     print("\nAll changes fixed. You are safe...")
